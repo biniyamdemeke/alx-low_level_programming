@@ -6,7 +6,9 @@
 #include <stdio.h>
 
 /*
- * main function
+ * Description: main - Prints out a string to stdout.
+ *
+ * Return: Always 
  */
 
 int main(void)
