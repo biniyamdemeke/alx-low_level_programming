@@ -5,10 +5,11 @@
 
 #include <stdio.h>
 
-/*
- * Description: main - Prints out a string to stdout.
+/**
+ * main - Prints "Programming is like building a multilingual
+ *                puzzle, followed by a new line.
  *
- * Return: Always 
+ * Return: Always 0.
  */
 
 int main(void)
