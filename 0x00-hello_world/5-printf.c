@@ -1,7 +1,3 @@
-/*
- * File: 5-printf.c
- * Auth: Biniyam Demeke
- */
 
 #include <stdio.h>
 
