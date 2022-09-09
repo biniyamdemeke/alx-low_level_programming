@@ -3,12 +3,12 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/* If else statement for number testing */
 int main(void)
 {
 	/* Main Functiion */
 	int n;
-
+	/* Main Function */
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* If else statement for numbering */
