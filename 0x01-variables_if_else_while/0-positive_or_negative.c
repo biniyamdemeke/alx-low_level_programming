@@ -1,9 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
-
-/* If else statement for number testing */
+/*
+ * If else statement 
+ * Description: Get a random number and print the number
+ * Return: 0
+ */
 int main(void)
 {
 	/* Main Functiion */
