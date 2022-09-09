@@ -2,10 +2,10 @@
 #include <time.h>
 #include <stdio.h>
 /*
- * If else statement 
- * Description: Get a random number and print the number
- * Return: 0
- */
+ *If else statement 
+ *Description: Get a random number and print the number
+ *Return: 0
+*/
 int main(void)
 {
 	/* Main Functiion */
