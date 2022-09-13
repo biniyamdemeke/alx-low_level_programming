@@ -1,19 +1,24 @@
-#include "libioP.h"
-#include "stdio.h"
+#include "holberton.h"
 
-#undef putchar
+/**
+ * main - entry point
+ *
+ * Description: Prints Holberton with _putchar
+ *
+ * Return: always 0
+ */
 
-int
-putchar (int c)
+int main(void)
 {
-	int result;
-	_IO_acquire_lock (_IO_stdout);
-	result = _IO_putc_unlocked (c, _IO_stdout);
-	_IO_release_lock (_IO_stdout);
-	return result;
-}
+	int i = 0;
+	char c;
+	char s[] = "Holberton\n";
 
-#if defined weak_alias && !defined _IO_MTSAFE_IO
-#undef putchar_unlocked
-weak_alias (putchar, putchar_unlocked)
-#endif
+	while (i <= 9)
+	{
+		c = s[i];
+		_putchar(c);
+		i++;
+	}
+	return (0);
+}
