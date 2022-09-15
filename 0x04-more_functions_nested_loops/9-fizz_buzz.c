@@ -25,7 +25,7 @@ int main(void)
 			if (i < p)
 				printf("Buzz ");
 		}
-			else
+		else
 		{
 			printf("Buzz");
 		}
@@ -33,8 +33,10 @@ int main(void)
 		{
 			printf("%i ", i);
 		}
+
 		i++;
-		}
-		printf("\n");
-		return (0);
+
 	}
+	printf("\n");
+	return (0);
+}
