@@ -6,6 +6,10 @@
  */
 int _atoi(char *s)
 {
+	/**
+	 * This is a description
+	 * for you
+	 */
 	short boolean;
 	int i, minus, result;
 
