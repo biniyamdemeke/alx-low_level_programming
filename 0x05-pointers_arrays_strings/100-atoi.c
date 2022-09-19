@@ -12,15 +12,22 @@ int _atoi(char *s)
 	 */
 	short boolean;
 	int i, minus, result;
-
+	/**
+	 * Disc
+	 */
 	i = minus = result = boolean = 0;
 	minus = -1;
+	/**
+	 * Desc
+	 */
 
 	while (s[i] != '\0')
 	{
 		if (s[i] == '-')
 			minus *= -1;
-
+	/**
+	 * Desc
+	 */
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			result *= 10;
@@ -36,4 +43,7 @@ int _atoi(char *s)
 	 * Return Value
 	 */
 	return (result);
+	/*
+	 * Desk
+	 */
 }
