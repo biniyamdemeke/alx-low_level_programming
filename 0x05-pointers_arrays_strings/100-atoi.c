@@ -4,33 +4,37 @@
  * @s: String
  * aReturn: Return the num
  */
+int is_numerical(unsigned int n)
+{
+	return (n >= '0' &&  n <= '9');
+}
+
+/**
+ * _atoi - convert a string to an integer
+ * @s: String
+ * Return: Return the num
+ */
 int _atoi(char *s)
 {
-	//This is a description
-	short boolean;
-	int i, minus, result;
-	// Desc
-	i = minus = result = boolean = 0;
-	minus = -1;
-	// Desc
+	unsigned int number, i;
+	int sign;
 
-	while (s[i] != '\0')
+	sign = 1;
+	number = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == '-')
-			minus *= -1;
-	// Desc
-		if (s[i] >= '0' && s[i] <= '9')
+		if (is_numerical(s[i]))
 		{
-			result *= 10;
-			result -= (s[i] - '0');
-			boolean = 1;
+			number = (s[i] - 48) + number * 10;
+
+			if (s[i + 1] == ' ')
+				break;
 		}
-		else if (boolean == 1)
-			break;
-		i++;
+		else if (s[i] == '-')
+		{
+			sign *= -1;
+		}
 	}
-	result *= minus;
-	// Desc
-	return (result);
-	// Desc
+	return (number *sign);
 }
