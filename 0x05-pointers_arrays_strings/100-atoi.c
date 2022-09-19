@@ -2,8 +2,8 @@
 
 /**
  * _atoi - convert a string to an integer
- * @s: String
- * aReturn: Return the num
+ * @n: String
+ * Return: Return the num
  */
 
 int is_numerical(unsigned int n)
