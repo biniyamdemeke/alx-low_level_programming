@@ -32,5 +32,8 @@ int _atoi(char *s)
 		i++;
 	}
 	result *= minus;
+	/**
+	 * Return Value
+	 */
 	return (result);
 }
