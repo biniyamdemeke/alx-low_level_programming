@@ -1,9 +1,11 @@
 #include "coding.h"
+
 /**
  * _atoi - convert a string to an integer
  * @s: String
  * aReturn: Return the num
  */
+
 int is_numerical(unsigned int n)
 {
 	return (n >= '0' &&  n <= '9');
@@ -36,5 +38,5 @@ int _atoi(char *s)
 			sign *= -1;
 		}
 	}
-	return (number *sign);
+	return (number * sign);
 }
