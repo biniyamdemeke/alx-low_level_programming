@@ -14,7 +14,7 @@ int is_numerical(unsigned int n)
  * @s: String
  * aReturn: Return the num
  */
-int _atoi(char * s)
+int _atoi(char *s)
 {
 	unsigned int number, i;
 	int sign;
