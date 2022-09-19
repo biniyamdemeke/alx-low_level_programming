@@ -1,9 +1,9 @@
 #include "coding.h"
 
 /**
- * _atoi - convert a string to an integer
- * @n: String
- * is_numerical - The function
+ * is_numerical - convert a string to an integer
+ * @n: Integer
+ * Description: 'The function'
  * Return: Return the num
  */
 
