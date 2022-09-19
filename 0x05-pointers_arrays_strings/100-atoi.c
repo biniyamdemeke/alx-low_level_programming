@@ -6,28 +6,19 @@
  */
 int _atoi(char *s)
 {
-	/**
-	 * This is a description
-	 * for you
-	 */
+	//This is a description
 	short boolean;
 	int i, minus, result;
-	/**
-	 * Disc
-	 */
+	// Desc
 	i = minus = result = boolean = 0;
 	minus = -1;
-	/**
-	 * Desc
-	 */
+	// Desc
 
 	while (s[i] != '\0')
 	{
 		if (s[i] == '-')
 			minus *= -1;
-	/**
-	 * Desc
-	 */
+	// Desc
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			result *= 10;
@@ -39,11 +30,7 @@ int _atoi(char *s)
 		i++;
 	}
 	result *= minus;
-	/**
-	 * Return Value
-	 */
+	// Desc
 	return (result);
-	/*
-	 * Desk
-	 */
+	// Desc
 }
