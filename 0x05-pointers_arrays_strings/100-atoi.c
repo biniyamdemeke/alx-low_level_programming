@@ -3,7 +3,7 @@
 /**
  * _atoi - convert a string to an integer
  * @n: String
- * is_numerical: The function
+ * is_numerical - The function
  * Return: Return the num
  */
 
