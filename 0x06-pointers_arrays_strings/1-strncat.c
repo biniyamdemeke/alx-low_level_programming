@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * _strncat - concatinate 2 strings.
  * @dest: first string.
@@ -7,7 +5,6 @@
  * @n: the number of bytes to use from src.
  * Return: string.
  */
-
 char *_strncat(char *dest, char *src, int n)
 {
 	int i;
