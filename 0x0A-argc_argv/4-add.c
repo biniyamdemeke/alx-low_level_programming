@@ -2,16 +2,11 @@
 #include <stdlib.h>
 #include <ctype.h>
 /**
- *
- *  * main - function to add variables
- *
- *   * @argc: number of arguments
- *
- *    * @argv: arguments being passed
- *
- *     * Return: Always 0 or 1
- *
- *      */
+ * main - function to add variables
+ * @argc: number of arguments
+ * @argv: arguments being passed
+ * Return: Always 0 or 1
+ */
 int main(int argc, char **argv)
 {
 	int a, b, addition;
