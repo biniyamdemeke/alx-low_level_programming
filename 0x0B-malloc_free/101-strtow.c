@@ -2,62 +2,83 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * strtow - concatenates all the arguments of your program
+ * _wcount - counts number of words
+ * @sw: string
+ *
+ * Return: int
+ */
+int _wcount(char *sw)
+{
+	int l, wc;
+
+	l = 0, wc = 0;
+	if (*(sw + l) == ' ')
+		l++;
+	while (*(sw + l))
+	{
+		if (*(sw + l) == ' ' && *(sw + l - 1) != ' ')
+			wc++;
+		if (*(sw + l) != ' '  && *(sw + l + 1) == 0)
+			wc++;
+		l++;
+	}
+	return (wc);
+}
+/**
+ * _trspace - Moves adress to remove trailig whitespaces
+ * @st: string
+ *
+ * Return: Pointer
+ */
+char *_trspace(char *st)
+{
+	while (*st == ' ')
+		st++;
+	return (st);
+}
+/**
+ * strtow - splits a string into words
  * @str: string
- * @av: arguments
- * Return: a pointer to a new string
+ *
+ * Return: Double Pointer
  */
 char **strtow(char *str)
 {
-	int i, w, j, k, count, m, wordf;
-	char **p;
-	char *x;
+	char **s, *ts;
+	int l, l2, wc, i, j, fr, k;
 
-	w = 0;
-	j = 0;
-	i = 0;
-	count = 0;
-	if (*str == '\0' || str == NULL)
-		return (NULL);
-	for (i = 0; str[i] != '\0'; i++)
+	if (str == NULL || *str == 0)
+		return (0);
+	fr = 0;
+	wc = _wcount(str);
+	if (wc == 0)
+		return (0);
+	s = malloc((wc + 1) * sizeof(char *));
+	if (s == 0)
+		return (0);
+	ts = _trspace(str);
+	for (i = 0; i < wc; i++)
 	{
-		if (str[i] == ' ' && (str[i + 1] != ' ' || str[i + 1] == '\0'))
-			w++;
-	}
-	p = (char **)malloc((w + 1) * sizeof(char *));
-	if (p == NULL)
-		return (NULL);
-	for (wordf = 0; str[wordf] && j <= w; wordf++)
-	{
-		count = 0;
-		if (str[wordf] != ' ')
+		l = 0;
+		while (*(ts + l) != ' ' && *(ts + l) != 0)
+			l++;
+		s[i] = malloc((l + 1) * sizeof(char));
+		if (s[i] == 0)
 		{
-			for (i = wordf ; str[i] != '\0'; i++)
-			{
-				if (str[i] == ' ')
-					break;
-				count++;
-			}
-			*(p + j) = (char *)malloc((count + 1) * sizeof(char));
-			if (*(p + j) == NULL)
-			{
-				for (k = 0; k <= j; k++)
-				{
-					x = p[k];
-					free(x);
-				}
-				free(p);
-				return (NULL);
-			}
-			for (m = 0; wordf < i; wordf++)
-			{
-				p[j][m] = str[wordf];
-				m++;
-			}
-			p[j][m] = '\0';
-			j++;
+			fr = 1;
+			break;
 		}
+		for (j = 0, l2 = 0; l2 < l; l2++, j++)
+			s[i][j] = *(ts + l2);
+		s[i][j] = '\0';
+		ts = _trspace(ts + l);
 	}
-	p[j] = NULL;
-	return (p);
+	s[i] = NULL;
+	if (fr == 1)
+	{
+		for (k = 0; k <= i; k++)
+			free(s[k]);
+		free(s);
+	}
+	return (s);
 }
